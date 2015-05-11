@@ -123,7 +123,7 @@ namespace nora.clara {
         }
 
         public void CreateAuthTicket() {
-            PendingTicketForAuth = AuthTicket.CreateAuthTicket();
+            PendingTicketForAuth = AuthTicket.CreateAuthTicket(Bot.NextToken(), Bot.PublicIP);
         }
 
         public void CreateLobby(string passKey) {
@@ -205,7 +205,8 @@ namespace nora.clara {
                     + "/" 
                     + pb.Body.message_sequence);
                 TicketForAuth = PendingTicketForAuth;
-                TicketForServer = AuthTicket.CreateServerTicket();
+                TicketForServer = AuthTicket.CreateServerTicket(
+                    Bot.Client.SteamID, TicketForAuth, AppOwnershipTicket);
             } else if (packetMsg.MsgType == EMsg.ClientTicketAuthComplete) {
                 var pb = new ClientMsgProtobuf<CMsgClientTicketAuthComplete>(packetMsg);
                 log.Debug("Client ticket auth complete with " 

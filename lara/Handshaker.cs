@@ -82,6 +82,18 @@ namespace nora.lara {
                 split.convars = client.ExposeCVars();
                 Serializer.SerializeWithLengthPrefix(stream, split, PrefixStyle.Base128);
                 
+                // auth ticket
+                byte[] bytes = new byte[details.Ticket.Length];
+                details.Ticket.CopyTo(bytes, 0);
+
+                bool carry = false;
+                for (int i = 0; i < bytes.Length; ++i) {
+                    byte d = (byte) (((bytes[i] * 2) % 256) + (carry ? 1 : 0));
+                    carry = bytes[i] > 127;
+                    bytes[i] = d;
+                }
+                stream.Write(bytes);
+
                 connection.EnqueueOutOfBand(stream.ToBytes());
             }
         }
