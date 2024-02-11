@@ -1,90 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{684CAA08-F4B0-4C86-A5F3-D500B655EDA3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nora.ashly</RootNamespace>
-    <AssemblyName>ashly</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Snappy.Sharp" Version="1.0.0" />
+    <PackageReference Include="SteamKit2" Version="2.5.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Ashly.cs" />
-    <Compile Include="AshlyController.cs" />
-    <Compile Include="dota\Ability.cs" />
-    <Compile Include="dota\GameRules.cs" />
-    <Compile Include="dota\Player.cs" />
-    <Compile Include="dota\PlayerResource.cs" />
-    <Compile Include="dsl\PropertyClass.cs" />
-    <Compile Include="dsl\Value.cs" />
+    <ProjectReference Include="..\clara\clara.csproj" />
+    <ProjectReference Include="..\lara\lara.csproj" />
+    <ProjectReference Include="..\machine\machine.csproj" />
+    <ProjectReference Include="..\protos\protos.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="SteamKit2">
-      <HintPath>..\packages\SteamKit2.1.6.2\lib\net40\SteamKit2.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Collections.Immutable, Version=1.1.33.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\System.Collections.Immutable.1.1.33-beta\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\clara\clara.csproj">
-      <Project>{0c612818-7a73-4f50-a1a9-d48f13ba43fe}</Project>
-      <Name>clara</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lara\lara.csproj">
-      <Project>{28de6743-ada5-45ac-a106-458f1ba29bca}</Project>
-      <Name>lara</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\machine\machine.csproj">
-      <Project>{6e766095-9b7e-4f93-a7f0-0c94a4571a76}</Project>
-      <Name>machine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\protos\protos.csproj">
-      <Project>{5c53cab7-1906-476b-877a-e75cbb540509}</Project>
-      <Name>protos</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

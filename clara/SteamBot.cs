@@ -11,6 +11,8 @@ using System.Net;
 using System.Threading;
 using System.Collections.Immutable;
 using System.Linq;
+using SteamKit2.GC.Dota.Internal;
+using CMsgClientHello = SteamKit2.Internal.CMsgClientHello;
 
 namespace nora.clara {
 
@@ -20,11 +22,11 @@ namespace nora.clara {
             SteamBot clara = new SteamBot(username, password);
 
             clara.Client.AddHandler(new Handler<SteamBot>(clara.OnMessage));
-            new Callback<SteamClient.ConnectedCallback>(clara.onConnected, clara.CallbackManager);
-            new Callback<SteamClient.DisconnectedCallback>(clara.onDisconnected, clara.CallbackManager);
-            new Callback<SteamUser.LoggedOnCallback>(clara.onLoggedIn, clara.CallbackManager);
-            new Callback<SteamApps.AppOwnershipTicketCallback>(clara.onAppOwnership, clara.CallbackManager);
-            new Callback<SteamApps.GameConnectTokensCallback>(clara.onTokensCallback, clara.CallbackManager);
+            clara.CallbackManager.Subscribe<SteamClient.ConnectedCallback>(clara.onConnected);
+            clara.CallbackManager.Subscribe<SteamClient.DisconnectedCallback>(clara.onDisconnected);
+            clara.CallbackManager.Subscribe<SteamUser.LoggedOnCallback>(clara.onLoggedIn);
+            clara.CallbackManager.Subscribe<SteamApps.AppOwnershipTicketCallback>(clara.onAppOwnership);
+            clara.CallbackManager.Subscribe<SteamApps.GameConnectTokensCallback>(clara.onTokensCallback);
 
             new Thread(clara.Run).Start();
 
@@ -55,7 +57,7 @@ namespace nora.clara {
                 Password = password,
             };
 
-            this.Client = new SteamClient(System.Net.Sockets.ProtocolType.Udp);
+            this.Client = new SteamClient();
             this.Friends = Client.GetHandler<SteamFriends>();
             this.Coordinator = Client.GetHandler<SteamGameCoordinator>();
             this.User = Client.GetHandler<SteamUser>();
@@ -127,11 +129,7 @@ namespace nora.clara {
         }
 
         private void onConnected(SteamClient.ConnectedCallback callback) {
-            log.DebugFormat("Connection callback from Steam, eresult: {0}", callback.Result);
-            if (callback.Result != EResult.OK) {
-                State = BotState.Failed;
-                return;
-            }
+            
 
             State = BotState.LoggingIn;
             User.LogOn(Logon);

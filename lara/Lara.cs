@@ -144,9 +144,16 @@ namespace nora.lara {
             }
 
             Active = false;
-            if (machine.State == SpectateState.DISCONNECTED) {
-            } else if (machine.State == SpectateState.REJECTED) {
-            } else {
+            Console.WriteLine(machine.State);
+            if (machine.State == SpectateState.DISCONNECTED) 
+            {
+                
+            } else if (machine.State == SpectateState.REJECTED) 
+            {
+                
+            } 
+            else 
+            {
                 throw new Exception("Unknown state " + machine.State);
             }
         }

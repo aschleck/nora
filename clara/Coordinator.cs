@@ -27,10 +27,10 @@ namespace nora.clara {
             this.Client = client;
 
             bot.Client.AddHandler(new Handler<Coordinator<S>>(OnMessage));
-            new Callback<SteamClient.ConnectedCallback>(this.OnConnected, bot.CallbackManager);
-            new Callback<SteamClient.DisconnectedCallback>(this.OnDisconnected, bot.CallbackManager);
-            new Callback<SteamUser.LoggedOnCallback>(this.OnLoggedIn, bot.CallbackManager);
-            new Callback<SteamGameCoordinator.MessageCallback>(this.OnMessage, bot.CallbackManager);
+            bot.CallbackManager.Subscribe<SteamClient.ConnectedCallback>(OnConnected);
+            bot.CallbackManager.Subscribe<SteamClient.DisconnectedCallback>(OnDisconnected);
+            bot.CallbackManager.Subscribe<SteamUser.LoggedOnCallback>(OnLoggedIn);
+            bot.CallbackManager.Subscribe<SteamGameCoordinator.MessageCallback>(OnMessage);
         }
 
         private void OnMessage(IPacketMsg packetMsg) {
@@ -95,9 +95,9 @@ namespace nora.clara {
             } else if (was != null && now == null) { // Probably due to CacheUnsubsribed.
                 Machine.Trigger(Event.LEFT_LOBBY);
             } else if (was != null && now != null) {
-                if (was.members.Count < now.members.Count) {
+                if (was.all_members.Count < now.all_members.Count) {
                     Machine.Trigger(Event.PLAYER_JOINED);
-                } else if (was.members.Count > now.members.Count && now.members.Count == 1) {
+                } else if (was.all_members.Count > now.all_members.Count && now.all_members.Count == 1) {
                     Machine.Trigger(Event.EMPTIED);
                 }
 
@@ -113,11 +113,11 @@ namespace nora.clara {
                     }
                 }
 
-                int valid = now.members.Count((member) =>
+                int valid = now.all_members.Count((member) =>
                     member.team == DOTA_GC_TEAM.DOTA_GC_TEAM_BAD_GUYS ||
                     member.team == DOTA_GC_TEAM.DOTA_GC_TEAM_GOOD_GUYS);
 
-                if (valid >= 2) {
+                if (valid >= 3) {
                     Machine.Trigger(Event.LOBBY_READY);
                 } else {
                     Machine.Trigger(Event.LOBBY_NOT_READY);

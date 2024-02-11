@@ -12,15 +12,12 @@
 // Note: requires additional types generated from: google/protobuf/descriptor.proto
 namespace nora.protos
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgVector")]
   public partial class CMsgVector : global::ProtoBuf.IExtensible
   {
     public CMsgVector() {}
     
 
     private float _x = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float x
     {
       get { return _x; }
@@ -28,8 +25,6 @@ namespace nora.protos
     }
 
     private float _y = default(float);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float y
     {
       get { return _y; }
@@ -37,8 +32,6 @@ namespace nora.protos
     }
 
     private float _z = default(float);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"z", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float z
     {
       get { return _z; }
@@ -49,15 +42,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgVector2D")]
   public partial class CMsgVector2D : global::ProtoBuf.IExtensible
   {
     public CMsgVector2D() {}
     
 
     private float _x = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float x
     {
       get { return _x; }
@@ -65,8 +55,6 @@ namespace nora.protos
     }
 
     private float _y = default(float);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float y
     {
       get { return _y; }
@@ -77,15 +65,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgQAngle")]
   public partial class CMsgQAngle : global::ProtoBuf.IExtensible
   {
     public CMsgQAngle() {}
     
 
     private float _x = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float x
     {
       get { return _x; }
@@ -93,8 +78,6 @@ namespace nora.protos
     }
 
     private float _y = default(float);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float y
     {
       get { return _y; }
@@ -102,8 +85,6 @@ namespace nora.protos
     }
 
     private float _z = default(float);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"z", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float z
     {
       get { return _z; }
@@ -114,15 +95,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CSVCMsg_GameEvent")]
   public partial class CSVCMsg_GameEvent : global::ProtoBuf.IExtensible
   {
     public CSVCMsg_GameEvent() {}
     
 
     private string _event_name = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"event_name", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string event_name
     {
       get { return _event_name; }
@@ -130,29 +108,23 @@ namespace nora.protos
     }
 
     private int _eventid = default(int);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"eventid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int eventid
     {
       get { return _eventid; }
       set { _eventid = value; }
     }
     private readonly global::System.Collections.Generic.List<CSVCMsg_GameEvent.key_t> _keys = new global::System.Collections.Generic.List<CSVCMsg_GameEvent.key_t>();
-    [global::ProtoBuf.ProtoMember(3, Name=@"keys", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CSVCMsg_GameEvent.key_t> keys
     {
       get { return _keys; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"key_t")]
   public partial class key_t : global::ProtoBuf.IExtensible
   {
     public key_t() {}
     
 
     private int _type = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int type
     {
       get { return _type; }
@@ -160,8 +132,6 @@ namespace nora.protos
     }
 
     private string _val_string = "";
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"val_string", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string val_string
     {
       get { return _val_string; }
@@ -169,8 +139,6 @@ namespace nora.protos
     }
 
     private float _val_float = default(float);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"val_float", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float val_float
     {
       get { return _val_float; }
@@ -178,8 +146,6 @@ namespace nora.protos
     }
 
     private int _val_long = default(int);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"val_long", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int val_long
     {
       get { return _val_long; }
@@ -187,8 +153,6 @@ namespace nora.protos
     }
 
     private int _val_short = default(int);
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"val_short", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int val_short
     {
       get { return _val_short; }
@@ -196,8 +160,6 @@ namespace nora.protos
     }
 
     private int _val_byte = default(int);
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"val_byte", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int val_byte
     {
       get { return _val_byte; }
@@ -205,8 +167,6 @@ namespace nora.protos
     }
 
     private bool _val_bool = default(bool);
-    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"val_bool", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool val_bool
     {
       get { return _val_bool; }
@@ -214,8 +174,6 @@ namespace nora.protos
     }
 
     private ulong _val_uint64 = default(ulong);
-    [global::ProtoBuf.ProtoMember(8, IsRequired = false, Name=@"val_uint64", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong val_uint64
     {
       get { return _val_uint64; }
@@ -231,27 +189,22 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CSVCMsgList_GameEvents")]
   public partial class CSVCMsgList_GameEvents : global::ProtoBuf.IExtensible
   {
     public CSVCMsgList_GameEvents() {}
     
     private readonly global::System.Collections.Generic.List<CSVCMsgList_GameEvents.event_t> _events = new global::System.Collections.Generic.List<CSVCMsgList_GameEvents.event_t>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"events", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CSVCMsgList_GameEvents.event_t> events
     {
       get { return _events; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"event_t")]
   public partial class event_t : global::ProtoBuf.IExtensible
   {
     public event_t() {}
     
 
     private int _tick = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"tick", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int tick
     {
       get { return _tick; }
@@ -259,8 +212,6 @@ namespace nora.protos
     }
 
     private CSVCMsg_GameEvent _event = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"event", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CSVCMsg_GameEvent @event
     {
       get { return _event; }
@@ -276,15 +227,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CSVCMsg_UserMessage")]
   public partial class CSVCMsg_UserMessage : global::ProtoBuf.IExtensible
   {
     public CSVCMsg_UserMessage() {}
     
 
     private int _msg_type = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"msg_type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int msg_type
     {
       get { return _msg_type; }
@@ -292,8 +240,6 @@ namespace nora.protos
     }
 
     private byte[] _msg_data = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"msg_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] msg_data
     {
       get { return _msg_data; }
@@ -304,27 +250,22 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CSVCMsgList_UserMessages")]
   public partial class CSVCMsgList_UserMessages : global::ProtoBuf.IExtensible
   {
     public CSVCMsgList_UserMessages() {}
     
     private readonly global::System.Collections.Generic.List<CSVCMsgList_UserMessages.usermsg_t> _usermsgs = new global::System.Collections.Generic.List<CSVCMsgList_UserMessages.usermsg_t>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"usermsgs", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CSVCMsgList_UserMessages.usermsg_t> usermsgs
     {
       get { return _usermsgs; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"usermsg_t")]
   public partial class usermsg_t : global::ProtoBuf.IExtensible
   {
     public usermsg_t() {}
     
 
     private int _tick = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"tick", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int tick
     {
       get { return _tick; }
@@ -332,8 +273,6 @@ namespace nora.protos
     }
 
     private CSVCMsg_UserMessage _msg = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"msg", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CSVCMsg_UserMessage msg
     {
       get { return _msg; }
@@ -349,32 +288,23 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-    [global::ProtoBuf.ProtoContract(Name=@"SIGNONSTATE", EnumPassthru=true)]
     public enum SIGNONSTATE
     {
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_NONE", Value=0)]
       SIGNONSTATE_NONE = 0,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_CHALLENGE", Value=1)]
       SIGNONSTATE_CHALLENGE = 1,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_CONNECTED", Value=2)]
       SIGNONSTATE_CONNECTED = 2,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_NEW", Value=3)]
       SIGNONSTATE_NEW = 3,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_PRESPAWN", Value=4)]
       SIGNONSTATE_PRESPAWN = 4,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_SPAWN", Value=5)]
       SIGNONSTATE_SPAWN = 5,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_FULL", Value=6)]
       SIGNONSTATE_FULL = 6,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"SIGNONSTATE_CHANGELEVEL", Value=7)]
       SIGNONSTATE_CHANGELEVEL = 7
     }
   
