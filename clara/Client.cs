@@ -127,12 +127,19 @@ namespace nora.clara {
             PendingTicketForAuth = AuthTicket.CreateAuthTicket(Bot.NextToken(), Bot.PublicIP);
         }
 
-        public void CreateLobby(string passKey) {
+        public void CreateLobby(string passKey)
+        {
+
+            var steam_id = 0u;
+            //invite somebody to lobby
+            if (steam_id != 0u)
+            {
+                var cmMsg = new ClientGCMsgProtobuf<CMsgInviteToParty>((uint)EGCBaseMsg.k_EMsgGCInviteToParty);
+                cmMsg.Body.steam_id = steam_id;
+                Bot.Coordinator.Send(cmMsg, 570);
+                Thread.Sleep(5000);
+            }
             
-            var cmMsg = new ClientGCMsgProtobuf<CMsgInviteToParty>((uint)EGCBaseMsg.k_EMsgGCInviteToParty);
-            cmMsg.Body.steam_id = 76561198079048422;
-            Bot.Coordinator.Send(cmMsg, 570);
-            Thread.Sleep(5000);
             
             var msg = new ClientGCMsgProtobuf<CMsgPracticeLobbyCreate>(
                 (uint) EDOTAGCMsg.k_EMsgGCPracticeLobbyCreate);
