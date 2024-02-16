@@ -5,7 +5,6 @@ using nora.lara;
 using nora.machine;
 using System;
 using System.Net;
-using System.Text.Json;
 using System.Threading;
 
 namespace nora.ashly {
@@ -21,7 +20,7 @@ namespace nora.ashly {
         }
 
         private void Execute() {
-            var bot = SteamBot.Create("ronikull", "115975300");
+            var bot = SteamBot.Create("username", "password");
             var client = new Client(bot);
             var machine = MakeMachine(bot, client);
             var coordinator = new Coordinator<State>(machine, client, bot);
@@ -62,10 +61,10 @@ namespace nora.ashly {
             Machines.Call createLobby = () => {
                 client.CreateLobby("cow");
             };
-            /*Machines.Call joinRadiant = () => {
+            Machines.Call joinRadiant = () => {
                 client.JoinLobbySlot(
                     SteamKit2.GC.Dota.Internal.DOTA_GC_TEAM.DOTA_GC_TEAM_GOOD_GUYS);
-            };*/
+            };
             Machines.Call startLobby = () => {
                 client.LaunchLobby();
             };
@@ -78,8 +77,7 @@ namespace nora.ashly {
             };
             Machines.Call join = () => {
                 string[] split = client.Lobby.connect.Split(':');
-                var endpoint = new IPEndPoint(IPAddress.Parse(split[2]), Int16.Parse(split[3].Split(']').First()));
-                Console.WriteLine(endpoint.Address.ToString());
+                var endpoint = new IPEndPoint(IPAddress.Parse(split[0]), Int16.Parse(split[1]));
 
                 Lara.Join(new ConnectionDetails() {
                     Endpoint = endpoint,
@@ -119,10 +117,10 @@ namespace nora.ashly {
                     .Add(On(Event.GOT_APP_TICKET).Transit(State.DOTA_HOME)))
                 .Add(In(State.DOTA_HOME)
                     .Entry(createLobby)
-                    .Add(On(Event.CREATED_LOBBY).Transit(State.LOBBY_STARTING)))
-                /*.Add(In(State.IN_LOBBY)
+                    .Add(On(Event.CREATED_LOBBY).Transit(State.IN_LOBBY)))
+                .Add(In(State.IN_LOBBY)
                     .Entry(joinRadiant)
-                    .Add(On(Event.LOBBY_READY).Transit(State.LOBBY_STARTING)))*/
+                    .Add(On(Event.LOBBY_READY).Transit(State.LOBBY_STARTING)))
                 .Add(In(State.LOBBY_STARTING)
                     .Entry(startLobby)
                     .Add(On(Event.SERVER_RUNNING).Transit(State.GETTING_AUTH)))
