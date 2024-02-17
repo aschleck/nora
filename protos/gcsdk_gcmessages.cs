@@ -12,15 +12,12 @@
 // Note: requires additional types generated from: steammessages.proto
 namespace nora.protos
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOIDOwner")]
   public partial class CMsgSOIDOwner : global::ProtoBuf.IExtensible
   {
     public CMsgSOIDOwner() {}
     
 
     private uint _type = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint type
     {
       get { return _type; }
@@ -28,8 +25,6 @@ namespace nora.protos
     }
 
     private ulong _id = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong id
     {
       get { return _id; }
@@ -40,15 +35,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOSingleObject")]
   public partial class CMsgSOSingleObject : global::ProtoBuf.IExtensible
   {
     public CMsgSOSingleObject() {}
     
 
     private int _type_id = default(int);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"type_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int type_id
     {
       get { return _type_id; }
@@ -56,8 +48,6 @@ namespace nora.protos
     }
 
     private byte[] _object_data = null;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"object_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] object_data
     {
       get { return _object_data; }
@@ -65,8 +55,6 @@ namespace nora.protos
     }
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -74,8 +62,6 @@ namespace nora.protos
     }
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -83,8 +69,6 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
@@ -95,13 +79,11 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOMultipleObjects")]
   public partial class CMsgSOMultipleObjects : global::ProtoBuf.IExtensible
   {
     public CMsgSOMultipleObjects() {}
     
     private readonly global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> _objects_modified = new global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"objects_modified", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> objects_modified
     {
       get { return _objects_modified; }
@@ -109,22 +91,18 @@ namespace nora.protos
   
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
       set { _version = value; }
     }
     private readonly global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> _objects_added = new global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject>();
-    [global::ProtoBuf.ProtoMember(4, Name=@"objects_added", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> objects_added
     {
       get { return _objects_added; }
     }
   
     private readonly global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> _objects_removed = new global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject>();
-    [global::ProtoBuf.ProtoMember(5, Name=@"objects_removed", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOMultipleObjects.SingleObject> objects_removed
     {
       get { return _objects_removed; }
@@ -132,8 +110,6 @@ namespace nora.protos
   
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -141,22 +117,17 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
       set { _service_id = value; }
     }
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SingleObject")]
   public partial class SingleObject : global::ProtoBuf.IExtensible
   {
     public SingleObject() {}
     
 
     private int _type_id = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"type_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int type_id
     {
       get { return _type_id; }
@@ -164,8 +135,6 @@ namespace nora.protos
     }
 
     private byte[] _object_data = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"object_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] object_data
     {
       get { return _object_data; }
@@ -181,13 +150,11 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheSubscribed")]
   public partial class CMsgSOCacheSubscribed : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheSubscribed() {}
     
     private readonly global::System.Collections.Generic.List<CMsgSOCacheSubscribed.SubscribedType> _objects = new global::System.Collections.Generic.List<CMsgSOCacheSubscribed.SubscribedType>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"objects", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOCacheSubscribed.SubscribedType> objects
     {
       get { return _objects; }
@@ -195,8 +162,6 @@ namespace nora.protos
   
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -204,8 +169,6 @@ namespace nora.protos
     }
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -213,15 +176,12 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
       set { _service_id = value; }
     }
     private readonly global::System.Collections.Generic.List<uint> _service_list = new global::System.Collections.Generic.List<uint>();
-    [global::ProtoBuf.ProtoMember(6, Name=@"service_list", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     public global::System.Collections.Generic.List<uint> service_list
     {
       get { return _service_list; }
@@ -229,29 +189,23 @@ namespace nora.protos
   
 
     private ulong _sync_version = default(ulong);
-    [global::ProtoBuf.ProtoMember(7, IsRequired = false, Name=@"sync_version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong sync_version
     {
       get { return _sync_version; }
       set { _sync_version = value; }
     }
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SubscribedType")]
   public partial class SubscribedType : global::ProtoBuf.IExtensible
   {
     public SubscribedType() {}
     
 
     private int _type_id = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"type_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int type_id
     {
       get { return _type_id; }
       set { _type_id = value; }
     }
     private readonly global::System.Collections.Generic.List<byte[]> _object_data = new global::System.Collections.Generic.List<byte[]>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"object_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<byte[]> object_data
     {
       get { return _object_data; }
@@ -267,15 +221,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheSubscribedUpToDate")]
   public partial class CMsgSOCacheSubscribedUpToDate : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheSubscribedUpToDate() {}
     
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -283,8 +234,6 @@ namespace nora.protos
     }
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -292,15 +241,12 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
       set { _service_id = value; }
     }
     private readonly global::System.Collections.Generic.List<uint> _service_list = new global::System.Collections.Generic.List<uint>();
-    [global::ProtoBuf.ProtoMember(4, Name=@"service_list", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     public global::System.Collections.Generic.List<uint> service_list
     {
       get { return _service_list; }
@@ -308,8 +254,6 @@ namespace nora.protos
   
 
     private ulong _sync_version = default(ulong);
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"sync_version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong sync_version
     {
       get { return _sync_version; }
@@ -320,15 +264,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheUnsubscribed")]
   public partial class CMsgSOCacheUnsubscribed : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheUnsubscribed() {}
     
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -339,15 +280,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheSubscriptionCheck")]
   public partial class CMsgSOCacheSubscriptionCheck : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheSubscriptionCheck() {}
     
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -355,8 +293,6 @@ namespace nora.protos
     }
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -364,15 +300,12 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
       set { _service_id = value; }
     }
     private readonly global::System.Collections.Generic.List<uint> _service_list = new global::System.Collections.Generic.List<uint>();
-    [global::ProtoBuf.ProtoMember(5, Name=@"service_list", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     public global::System.Collections.Generic.List<uint> service_list
     {
       get { return _service_list; }
@@ -380,8 +313,6 @@ namespace nora.protos
   
 
     private ulong _sync_version = default(ulong);
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"sync_version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong sync_version
     {
       get { return _sync_version; }
@@ -392,15 +323,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheSubscriptionRefresh")]
   public partial class CMsgSOCacheSubscriptionRefresh : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheSubscriptionRefresh() {}
     
 
     private CMsgSOIDOwner _owner_soid = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"owner_soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner owner_soid
     {
       get { return _owner_soid; }
@@ -411,15 +339,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheVersion")]
   public partial class CMsgSOCacheVersion : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheVersion() {}
     
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -430,15 +355,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCMultiplexMessage")]
   public partial class CMsgGCMultiplexMessage : global::ProtoBuf.IExtensible
   {
     public CMsgGCMultiplexMessage() {}
     
 
     private uint _msgtype = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"msgtype", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint msgtype
     {
       get { return _msgtype; }
@@ -446,15 +368,12 @@ namespace nora.protos
     }
 
     private byte[] _payload = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"payload", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] payload
     {
       get { return _payload; }
       set { _payload = value; }
     }
     private readonly global::System.Collections.Generic.List<ulong> _steamids = new global::System.Collections.Generic.List<ulong>();
-    [global::ProtoBuf.ProtoMember(3, Name=@"steamids", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
     public global::System.Collections.Generic.List<ulong> steamids
     {
       get { return _steamids; }
@@ -465,15 +384,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CGCToGCMsgMasterAck")]
   public partial class CGCToGCMsgMasterAck : global::ProtoBuf.IExtensible
   {
     public CGCToGCMsgMasterAck() {}
     
 
     private uint _dir_index = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"dir_index", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint dir_index
     {
       get { return _dir_index; }
@@ -481,8 +397,6 @@ namespace nora.protos
     }
 
     private string _machine_name = "";
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"machine_name", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string machine_name
     {
       get { return _machine_name; }
@@ -490,36 +404,29 @@ namespace nora.protos
     }
 
     private string _process_name = "";
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"process_name", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string process_name
     {
       get { return _process_name; }
       set { _process_name = value; }
     }
     private readonly global::System.Collections.Generic.List<CGCToGCMsgMasterAck.Process> _directory = new global::System.Collections.Generic.List<CGCToGCMsgMasterAck.Process>();
-    [global::ProtoBuf.ProtoMember(6, Name=@"directory", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CGCToGCMsgMasterAck.Process> directory
     {
       get { return _directory; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Process")]
   public partial class Process : global::ProtoBuf.IExtensible
   {
     public Process() {}
     
 
     private uint _dir_index = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"dir_index", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint dir_index
     {
       get { return _dir_index; }
       set { _dir_index = value; }
     }
     private readonly global::System.Collections.Generic.List<uint> _type_instances = new global::System.Collections.Generic.List<uint>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"type_instances", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     public global::System.Collections.Generic.List<uint> type_instances
     {
       get { return _type_instances; }
@@ -535,15 +442,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CGCToGCMsgMasterAck_Response")]
   public partial class CGCToGCMsgMasterAck_Response : global::ProtoBuf.IExtensible
   {
     public CGCToGCMsgMasterAck_Response() {}
     
 
     private int _eresult = (int)2;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"eresult", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue((int)2)]
     public int eresult
     {
       get { return _eresult; }
@@ -554,27 +458,22 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CGCToGCMsgMasterStartupComplete")]
   public partial class CGCToGCMsgMasterStartupComplete : global::ProtoBuf.IExtensible
   {
     public CGCToGCMsgMasterStartupComplete() {}
     
     private readonly global::System.Collections.Generic.List<CGCToGCMsgMasterStartupComplete.GCInfo> _gc_info = new global::System.Collections.Generic.List<CGCToGCMsgMasterStartupComplete.GCInfo>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"gc_info", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CGCToGCMsgMasterStartupComplete.GCInfo> gc_info
     {
       get { return _gc_info; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"GCInfo")]
   public partial class GCInfo : global::ProtoBuf.IExtensible
   {
     public GCInfo() {}
     
 
     private uint _dir_index = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"dir_index", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint dir_index
     {
       get { return _dir_index; }
@@ -582,8 +481,6 @@ namespace nora.protos
     }
 
     private string _machine_name = "";
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"machine_name", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string machine_name
     {
       get { return _machine_name; }
@@ -599,15 +496,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CGCToGCMsgRouted")]
   public partial class CGCToGCMsgRouted : global::ProtoBuf.IExtensible
   {
     public CGCToGCMsgRouted() {}
     
 
     private uint _msg_type = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"msg_type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint msg_type
     {
       get { return _msg_type; }
@@ -615,8 +509,6 @@ namespace nora.protos
     }
 
     private ulong _sender_id = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"sender_id", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong sender_id
     {
       get { return _sender_id; }
@@ -624,8 +516,6 @@ namespace nora.protos
     }
 
     private byte[] _net_message = null;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"net_message", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] net_message
     {
       get { return _net_message; }
@@ -636,15 +526,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CGCToGCMsgRoutedReply")]
   public partial class CGCToGCMsgRoutedReply : global::ProtoBuf.IExtensible
   {
     public CGCToGCMsgRoutedReply() {}
     
 
     private uint _msg_type = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"msg_type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint msg_type
     {
       get { return _msg_type; }
@@ -652,8 +539,6 @@ namespace nora.protos
     }
 
     private byte[] _net_message = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"net_message", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] net_message
     {
       get { return _net_message; }
@@ -664,27 +549,22 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCUpdateSubGCSessionInfo")]
   public partial class CMsgGCUpdateSubGCSessionInfo : global::ProtoBuf.IExtensible
   {
     public CMsgGCUpdateSubGCSessionInfo() {}
     
     private readonly global::System.Collections.Generic.List<CMsgGCUpdateSubGCSessionInfo.CMsgUpdate> _updates = new global::System.Collections.Generic.List<CMsgGCUpdateSubGCSessionInfo.CMsgUpdate>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"updates", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgGCUpdateSubGCSessionInfo.CMsgUpdate> updates
     {
       get { return _updates; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgUpdate")]
   public partial class CMsgUpdate : global::ProtoBuf.IExtensible
   {
     public CMsgUpdate() {}
     
 
     private ulong _steamid = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"steamid", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong steamid
     {
       get { return _steamid; }
@@ -692,8 +572,6 @@ namespace nora.protos
     }
 
     private uint _ip = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"ip", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint ip
     {
       get { return _ip; }
@@ -701,8 +579,6 @@ namespace nora.protos
     }
 
     private bool _trusted = default(bool);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"trusted", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool trusted
     {
       get { return _trusted; }
@@ -718,15 +594,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCRequestSubGCSessionInfo")]
   public partial class CMsgGCRequestSubGCSessionInfo : global::ProtoBuf.IExtensible
   {
     public CMsgGCRequestSubGCSessionInfo() {}
     
 
     private ulong _steamid = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"steamid", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong steamid
     {
       get { return _steamid; }
@@ -737,15 +610,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCRequestSubGCSessionInfoResponse")]
   public partial class CMsgGCRequestSubGCSessionInfoResponse : global::ProtoBuf.IExtensible
   {
     public CMsgGCRequestSubGCSessionInfoResponse() {}
     
 
     private uint _ip = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"ip", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint ip
     {
       get { return _ip; }
@@ -753,8 +623,6 @@ namespace nora.protos
     }
 
     private bool _trusted = default(bool);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"trusted", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool trusted
     {
       get { return _trusted; }
@@ -765,15 +633,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgSOCacheHaveVersion")]
   public partial class CMsgSOCacheHaveVersion : global::ProtoBuf.IExtensible
   {
     public CMsgSOCacheHaveVersion() {}
     
 
     private CMsgSOIDOwner _soid = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"soid", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgSOIDOwner soid
     {
       get { return _soid; }
@@ -781,8 +646,6 @@ namespace nora.protos
     }
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -790,8 +653,6 @@ namespace nora.protos
     }
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
@@ -799,8 +660,6 @@ namespace nora.protos
     }
 
     private uint _cached_file_version = default(uint);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"cached_file_version", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint cached_file_version
     {
       get { return _cached_file_version; }
@@ -811,22 +670,18 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgClientHello")]
   public partial class CMsgClientHello : global::ProtoBuf.IExtensible
   {
     public CMsgClientHello() {}
     
 
     private uint _version = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint version
     {
       get { return _version; }
       set { _version = value; }
     }
     private readonly global::System.Collections.Generic.List<CMsgSOCacheHaveVersion> _socache_have_versions = new global::System.Collections.Generic.List<CMsgSOCacheHaveVersion>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"socache_have_versions", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOCacheHaveVersion> socache_have_versions
     {
       get { return _socache_have_versions; }
@@ -834,8 +689,6 @@ namespace nora.protos
   
 
     private uint _client_session_need = default(uint);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"client_session_need", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint client_session_need
     {
       get { return _client_session_need; }
@@ -843,8 +696,6 @@ namespace nora.protos
     }
 
     private PartnerAccountType _client_launcher = PartnerAccountType.PARTNER_NONE;
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"client_launcher", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(PartnerAccountType.PARTNER_NONE)]
     public PartnerAccountType client_launcher
     {
       get { return _client_launcher; }
@@ -852,8 +703,6 @@ namespace nora.protos
     }
 
     private string _secret_key = "";
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"secret_key", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string secret_key
     {
       get { return _secret_key; }
@@ -864,15 +713,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgClientWelcome")]
   public partial class CMsgClientWelcome : global::ProtoBuf.IExtensible
   {
     public CMsgClientWelcome() {}
     
 
     private uint _version = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint version
     {
       get { return _version; }
@@ -880,22 +726,18 @@ namespace nora.protos
     }
 
     private byte[] _game_data = null;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"game_data", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] game_data
     {
       get { return _game_data; }
       set { _game_data = value; }
     }
     private readonly global::System.Collections.Generic.List<CMsgSOCacheSubscribed> _outofdate_subscribed_caches = new global::System.Collections.Generic.List<CMsgSOCacheSubscribed>();
-    [global::ProtoBuf.ProtoMember(3, Name=@"outofdate_subscribed_caches", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOCacheSubscribed> outofdate_subscribed_caches
     {
       get { return _outofdate_subscribed_caches; }
     }
   
     private readonly global::System.Collections.Generic.List<CMsgSOCacheSubscriptionCheck> _uptodate_subscribed_caches = new global::System.Collections.Generic.List<CMsgSOCacheSubscriptionCheck>();
-    [global::ProtoBuf.ProtoMember(4, Name=@"uptodate_subscribed_caches", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgSOCacheSubscriptionCheck> uptodate_subscribed_caches
     {
       get { return _uptodate_subscribed_caches; }
@@ -903,8 +745,6 @@ namespace nora.protos
   
 
     private CMsgClientWelcome.Location _location = null;
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"location", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CMsgClientWelcome.Location location
     {
       get { return _location; }
@@ -912,22 +752,17 @@ namespace nora.protos
     }
 
     private byte[] _save_game_key = null;
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"save_game_key", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public byte[] save_game_key
     {
       get { return _save_game_key; }
       set { _save_game_key = value; }
     }
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Location")]
   public partial class Location : global::ProtoBuf.IExtensible
   {
     public Location() {}
     
 
     private float _latitude = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"latitude", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float latitude
     {
       get { return _latitude; }
@@ -935,8 +770,6 @@ namespace nora.protos
     }
 
     private float _longitude = default(float);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"longitude", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float longitude
     {
       get { return _longitude; }
@@ -944,8 +777,6 @@ namespace nora.protos
     }
 
     private string _country = "";
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"country", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string country
     {
       get { return _country; }
@@ -961,15 +792,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgConnectionStatus")]
   public partial class CMsgConnectionStatus : global::ProtoBuf.IExtensible
   {
     public CMsgConnectionStatus() {}
     
 
     private GCConnectionStatus _status = GCConnectionStatus.GCConnectionStatus_HAVE_SESSION;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"status", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(GCConnectionStatus.GCConnectionStatus_HAVE_SESSION)]
     public GCConnectionStatus status
     {
       get { return _status; }
@@ -977,8 +805,6 @@ namespace nora.protos
     }
 
     private uint _client_session_need = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"client_session_need", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint client_session_need
     {
       get { return _client_session_need; }
@@ -986,8 +812,6 @@ namespace nora.protos
     }
 
     private int _queue_position = default(int);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"queue_position", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int queue_position
     {
       get { return _queue_position; }
@@ -995,8 +819,6 @@ namespace nora.protos
     }
 
     private int _queue_size = default(int);
-    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"queue_size", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int queue_size
     {
       get { return _queue_size; }
@@ -1004,8 +826,6 @@ namespace nora.protos
     }
 
     private int _wait_seconds = default(int);
-    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"wait_seconds", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int wait_seconds
     {
       get { return _wait_seconds; }
@@ -1013,8 +833,6 @@ namespace nora.protos
     }
 
     private int _estimated_wait_seconds_remaining = default(int);
-    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name=@"estimated_wait_seconds_remaining", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int estimated_wait_seconds_remaining
     {
       get { return _estimated_wait_seconds_remaining; }
@@ -1025,15 +843,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCToGCSOCacheSubscribe")]
   public partial class CMsgGCToGCSOCacheSubscribe : global::ProtoBuf.IExtensible
   {
     public CMsgGCToGCSOCacheSubscribe() {}
     
 
     private ulong _subscriber = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"subscriber", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong subscriber
     {
       get { return _subscriber; }
@@ -1041,8 +856,6 @@ namespace nora.protos
     }
 
     private ulong _subscribe_to = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"subscribe_to", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong subscribe_to
     {
       get { return _subscribe_to; }
@@ -1050,29 +863,23 @@ namespace nora.protos
     }
 
     private ulong _sync_version = default(ulong);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"sync_version", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong sync_version
     {
       get { return _sync_version; }
       set { _sync_version = value; }
     }
     private readonly global::System.Collections.Generic.List<CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions> _have_versions = new global::System.Collections.Generic.List<CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions>();
-    [global::ProtoBuf.ProtoMember(4, Name=@"have_versions", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CMsgGCToGCSOCacheSubscribe.CMsgHaveVersions> have_versions
     {
       get { return _have_versions; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgHaveVersions")]
   public partial class CMsgHaveVersions : global::ProtoBuf.IExtensible
   {
     public CMsgHaveVersions() {}
     
 
     private uint _service_id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"service_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint service_id
     {
       get { return _service_id; }
@@ -1080,8 +887,6 @@ namespace nora.protos
     }
 
     private ulong _version = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"version", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong version
     {
       get { return _version; }
@@ -1097,15 +902,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCToGCSOCacheUnsubscribe")]
   public partial class CMsgGCToGCSOCacheUnsubscribe : global::ProtoBuf.IExtensible
   {
     public CMsgGCToGCSOCacheUnsubscribe() {}
     
 
     private ulong _subscriber = default(ulong);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"subscriber", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong subscriber
     {
       get { return _subscriber; }
@@ -1113,8 +915,6 @@ namespace nora.protos
     }
 
     private ulong _unsubscribe_from = default(ulong);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"unsubscribe_from", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(ulong))]
     public ulong unsubscribe_from
     {
       get { return _unsubscribe_from; }
@@ -1125,7 +925,6 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCClientPing")]
   public partial class CMsgGCClientPing : global::ProtoBuf.IExtensible
   {
     public CMsgGCClientPing() {}
@@ -1135,15 +934,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCToGCLoadSessionSOCache")]
   public partial class CMsgGCToGCLoadSessionSOCache : global::ProtoBuf.IExtensible
   {
     public CMsgGCToGCLoadSessionSOCache() {}
     
 
     private uint _account_id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"account_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint account_id
     {
       get { return _account_id; }
@@ -1154,7 +950,6 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCToGCLoadSessionSOCacheResponse")]
   public partial class CMsgGCToGCLoadSessionSOCacheResponse : global::ProtoBuf.IExtensible
   {
     public CMsgGCToGCLoadSessionSOCacheResponse() {}
@@ -1164,15 +959,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CMsgGCToGCUpdateSessionStats")]
   public partial class CMsgGCToGCUpdateSessionStats : global::ProtoBuf.IExtensible
   {
     public CMsgGCToGCUpdateSessionStats() {}
     
 
     private uint _user_sessions = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"user_sessions", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint user_sessions
     {
       get { return _user_sessions; }
@@ -1180,8 +972,6 @@ namespace nora.protos
     }
 
     private uint _server_sessions = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"server_sessions", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint server_sessions
     {
       get { return _server_sessions; }
@@ -1189,8 +979,6 @@ namespace nora.protos
     }
 
     private bool _in_logon_surge = default(bool);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"in_logon_surge", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool in_logon_surge
     {
       get { return _in_logon_surge; }
@@ -1201,36 +989,29 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CWorkshop_PopulateItemDescriptions_Request")]
   public partial class CWorkshop_PopulateItemDescriptions_Request : global::ProtoBuf.IExtensible
   {
     public CWorkshop_PopulateItemDescriptions_Request() {}
     
 
     private uint _appid = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"appid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint appid
     {
       get { return _appid; }
       set { _appid = value; }
     }
     private readonly global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock> _languages = new global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"languages", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.ItemDescriptionsLanguageBlock> languages
     {
       get { return _languages; }
     }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"SingleItemDescription")]
   public partial class SingleItemDescription : global::ProtoBuf.IExtensible
   {
     public SingleItemDescription() {}
     
 
     private uint _gameitemid = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"gameitemid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint gameitemid
     {
       get { return _gameitemid; }
@@ -1238,8 +1019,6 @@ namespace nora.protos
     }
 
     private string _item_description = "";
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"item_description", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string item_description
     {
       get { return _item_description; }
@@ -1250,22 +1029,18 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"ItemDescriptionsLanguageBlock")]
   public partial class ItemDescriptionsLanguageBlock : global::ProtoBuf.IExtensible
   {
     public ItemDescriptionsLanguageBlock() {}
     
 
     private string _language = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"language", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string language
     {
       get { return _language; }
       set { _language = value; }
     }
     private readonly global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription> _descriptions = new global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription>();
-    [global::ProtoBuf.ProtoMember(2, Name=@"descriptions", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CWorkshop_PopulateItemDescriptions_Request.SingleItemDescription> descriptions
     {
       get { return _descriptions; }
@@ -1281,15 +1056,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CWorkshop_GetContributors_Request")]
   public partial class CWorkshop_GetContributors_Request : global::ProtoBuf.IExtensible
   {
     public CWorkshop_GetContributors_Request() {}
     
 
     private uint _appid = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"appid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint appid
     {
       get { return _appid; }
@@ -1297,8 +1069,6 @@ namespace nora.protos
     }
 
     private uint _gameitemid = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"gameitemid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint gameitemid
     {
       get { return _gameitemid; }
@@ -1309,13 +1079,11 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CWorkshop_GetContributors_Response")]
   public partial class CWorkshop_GetContributors_Response : global::ProtoBuf.IExtensible
   {
     public CWorkshop_GetContributors_Response() {}
     
     private readonly global::System.Collections.Generic.List<ulong> _contributors = new global::System.Collections.Generic.List<ulong>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"contributors", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
     public global::System.Collections.Generic.List<ulong> contributors
     {
       get { return _contributors; }
@@ -1326,40 +1094,29 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-    [global::ProtoBuf.ProtoContract(Name=@"PartnerAccountType", EnumPassthru=true)]
     public enum PartnerAccountType
     {
             
-      [global::ProtoBuf.ProtoEnum(Name=@"PARTNER_NONE", Value=0)]
       PARTNER_NONE = 0,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"PARTNER_PERFECT_WORLD", Value=1)]
       PARTNER_PERFECT_WORLD = 1,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"PARTNER_NEXON", Value=2)]
       PARTNER_NEXON = 2
     }
   
-    [global::ProtoBuf.ProtoContract(Name=@"GCConnectionStatus", EnumPassthru=true)]
     public enum GCConnectionStatus
     {
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_HAVE_SESSION", Value=0)]
       GCConnectionStatus_HAVE_SESSION = 0,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_GC_GOING_DOWN", Value=1)]
       GCConnectionStatus_GC_GOING_DOWN = 1,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_NO_SESSION", Value=2)]
       GCConnectionStatus_NO_SESSION = 2,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE", Value=3)]
       GCConnectionStatus_NO_SESSION_IN_LOGON_QUEUE = 3,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_NO_STEAM", Value=4)]
       GCConnectionStatus_NO_STEAM = 4,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"GCConnectionStatus_SUSPENDED", Value=5)]
       GCConnectionStatus_SUSPENDED = 5
     }
   

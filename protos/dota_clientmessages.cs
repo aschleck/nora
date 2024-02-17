@@ -14,15 +14,12 @@
 // Note: requires additional types generated from: dota_commonmessages.proto
 namespace nora.protos
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_MapPing")]
   public partial class CDOTAClientMsg_MapPing : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_MapPing() {}
     
 
     private CDOTAMsg_LocationPing _location_ping = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"location_ping", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_LocationPing location_ping
     {
       get { return _location_ping; }
@@ -33,15 +30,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_ItemAlert")]
   public partial class CDOTAClientMsg_ItemAlert : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_ItemAlert() {}
     
 
     private CDOTAMsg_ItemAlert _item_alert = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"item_alert", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_ItemAlert item_alert
     {
       get { return _item_alert; }
@@ -52,15 +46,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_MapLine")]
   public partial class CDOTAClientMsg_MapLine : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_MapLine() {}
     
 
     private CDOTAMsg_MapLine _mapline = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"mapline", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_MapLine mapline
     {
       get { return _mapline; }
@@ -71,15 +62,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_AspectRatio")]
   public partial class CDOTAClientMsg_AspectRatio : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_AspectRatio() {}
     
 
     private float _ratio = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"ratio", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float ratio
     {
       get { return _ratio; }
@@ -90,15 +78,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_UnitsAutoAttack")]
   public partial class CDOTAClientMsg_UnitsAutoAttack : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_UnitsAutoAttack() {}
     
 
     private bool _enabled = default(bool);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"enabled", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool enabled
     {
       get { return _enabled; }
@@ -109,15 +94,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_UnitsAutoAttackAfterSpell")]
   public partial class CDOTAClientMsg_UnitsAutoAttackAfterSpell : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_UnitsAutoAttackAfterSpell() {}
     
 
     private bool _enabled = default(bool);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"enabled", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool enabled
     {
       get { return _enabled; }
@@ -128,15 +110,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_TeleportRequiresHalt")]
   public partial class CDOTAClientMsg_TeleportRequiresHalt : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_TeleportRequiresHalt() {}
     
 
     private bool _enabled = default(bool);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"enabled", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool enabled
     {
       get { return _enabled; }
@@ -147,15 +126,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_AutoPurchaseItems")]
   public partial class CDOTAClientMsg_AutoPurchaseItems : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_AutoPurchaseItems() {}
     
 
     private bool _enabled = default(bool);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"enabled", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool enabled
     {
       get { return _enabled; }
@@ -166,15 +142,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_TestItems")]
   public partial class CDOTAClientMsg_TestItems : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_TestItems() {}
     
 
     private string _key_values = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"key_values", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string key_values
     {
       get { return _key_values; }
@@ -185,15 +158,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_SearchString")]
   public partial class CDOTAClientMsg_SearchString : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_SearchString() {}
     
 
     private string _search = "";
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"search", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue("")]
     public string search
     {
       get { return _search; }
@@ -204,7 +174,6 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_Pause")]
   public partial class CDOTAClientMsg_Pause : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_Pause() {}
@@ -214,15 +183,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_ShopViewMode")]
   public partial class CDOTAClientMsg_ShopViewMode : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_ShopViewMode() {}
     
 
     private uint _mode = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"mode", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint mode
     {
       get { return _mode; }
@@ -233,15 +199,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_SetUnitShareFlag")]
   public partial class CDOTAClientMsg_SetUnitShareFlag : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_SetUnitShareFlag() {}
     
 
     private uint _playerID = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"playerID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint playerID
     {
       get { return _playerID; }
@@ -249,8 +212,6 @@ namespace nora.protos
     }
 
     private uint _flag = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"flag", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint flag
     {
       get { return _flag; }
@@ -258,8 +219,6 @@ namespace nora.protos
     }
 
     private bool _state = default(bool);
-    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"state", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool state
     {
       get { return _state; }
@@ -270,15 +229,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_SwapRequest")]
   public partial class CDOTAClientMsg_SwapRequest : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_SwapRequest() {}
     
 
     private uint _player_id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"player_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint player_id
     {
       get { return _player_id; }
@@ -289,15 +245,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_SwapAccept")]
   public partial class CDOTAClientMsg_SwapAccept : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_SwapAccept() {}
     
 
     private uint _player_id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"player_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint player_id
     {
       get { return _player_id; }
@@ -308,15 +261,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_WorldLine")]
   public partial class CDOTAClientMsg_WorldLine : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_WorldLine() {}
     
 
     private CDOTAMsg_WorldLine _worldline = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"worldline", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_WorldLine worldline
     {
       get { return _worldline; }
@@ -327,7 +277,6 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_RequestGraphUpdate")]
   public partial class CDOTAClientMsg_RequestGraphUpdate : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_RequestGraphUpdate() {}
@@ -337,15 +286,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_ChatWheel")]
   public partial class CDOTAClientMsg_ChatWheel : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_ChatWheel() {}
     
 
     private EDOTAChatWheelMessage _chat_message = EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"chat_message", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(EDOTAChatWheelMessage.k_EDOTA_CW_Ok)]
     public EDOTAChatWheelMessage chat_message
     {
       get { return _chat_message; }
@@ -353,8 +299,6 @@ namespace nora.protos
     }
 
     private uint _param_hero_id = default(uint);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"param_hero_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint param_hero_id
     {
       get { return _param_hero_id; }
@@ -365,15 +309,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_SendStatPopup")]
   public partial class CDOTAClientMsg_SendStatPopup : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_SendStatPopup() {}
     
 
     private CDOTAMsg_SendStatPopup _statpopup = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"statpopup", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_SendStatPopup statpopup
     {
       get { return _statpopup; }
@@ -384,15 +325,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_BeginLastHitChallenge")]
   public partial class CDOTAClientMsg_BeginLastHitChallenge : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_BeginLastHitChallenge() {}
     
 
     private uint _chosen_lane = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"chosen_lane", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint chosen_lane
     {
       get { return _chosen_lane; }
@@ -400,8 +338,6 @@ namespace nora.protos
     }
 
     private bool _helper_enabled = default(bool);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"helper_enabled", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool helper_enabled
     {
       get { return _helper_enabled; }
@@ -412,15 +348,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_UpdateQuickBuyItem")]
   public partial class CDOTAClientMsg_UpdateQuickBuyItem : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_UpdateQuickBuyItem() {}
     
 
     private int _item_type = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"item_type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int item_type
     {
       get { return _item_type; }
@@ -428,8 +361,6 @@ namespace nora.protos
     }
 
     private bool _purchasable = default(bool);
-    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"purchasable", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool purchasable
     {
       get { return _purchasable; }
@@ -440,13 +371,11 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_UpdateQuickBuy")]
   public partial class CDOTAClientMsg_UpdateQuickBuy : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_UpdateQuickBuy() {}
     
     private readonly global::System.Collections.Generic.List<CDOTAClientMsg_UpdateQuickBuyItem> _items = new global::System.Collections.Generic.List<CDOTAClientMsg_UpdateQuickBuyItem>();
-    [global::ProtoBuf.ProtoMember(1, Name=@"items", DataFormat = global::ProtoBuf.DataFormat.Default)]
     public global::System.Collections.Generic.List<CDOTAClientMsg_UpdateQuickBuyItem> items
     {
       get { return _items; }
@@ -457,15 +386,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_UpdateCoachListen")]
   public partial class CDOTAClientMsg_UpdateCoachListen : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_UpdateCoachListen() {}
     
 
     private uint _player_mask = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"player_mask", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint player_mask
     {
       get { return _player_mask; }
@@ -476,15 +402,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_CoachHUDPing")]
   public partial class CDOTAClientMsg_CoachHUDPing : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_CoachHUDPing() {}
     
 
     private CDOTAMsg_CoachHUDPing _hud_ping = null;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"hud_ping", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(null)]
     public CDOTAMsg_CoachHUDPing hud_ping
     {
       get { return _hud_ping; }
@@ -495,15 +418,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_RecordVote")]
   public partial class CDOTAClientMsg_RecordVote : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_RecordVote() {}
     
 
     private int _choice_index = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"choice_index", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int choice_index
     {
       get { return _choice_index; }
@@ -514,15 +434,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_WillPurchaseAlert")]
   public partial class CDOTAClientMsg_WillPurchaseAlert : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_WillPurchaseAlert() {}
     
 
     private int _itemid = default(int);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"itemid", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(default(int))]
     public int itemid
     {
       get { return _itemid; }
@@ -533,15 +450,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_PlayerShowCase")]
   public partial class CDOTAClientMsg_PlayerShowCase : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_PlayerShowCase() {}
     
 
     private bool _showcase = default(bool);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"showcase", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    [global::System.ComponentModel.DefaultValue(default(bool))]
     public bool showcase
     {
       get { return _showcase; }
@@ -552,15 +466,12 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"CDOTAClientMsg_CameraZoomAmount")]
   public partial class CDOTAClientMsg_CameraZoomAmount : global::ProtoBuf.IExtensible
   {
     public CDOTAClientMsg_CameraZoomAmount() {}
     
 
     private float _zoom_amount = default(float);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"zoom_amount", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    [global::System.ComponentModel.DefaultValue(default(float))]
     public float zoom_amount
     {
       get { return _zoom_amount; }
@@ -571,89 +482,61 @@ namespace nora.protos
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-    [global::ProtoBuf.ProtoContract(Name=@"EDotaClientMessages", EnumPassthru=true)]
     public enum EDotaClientMessages
     {
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_MapLine", Value=1)]
       DOTA_CM_MapLine = 1,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_AspectRatio", Value=2)]
       DOTA_CM_AspectRatio = 2,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_MapPing", Value=3)]
       DOTA_CM_MapPing = 3,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_UnitsAutoAttack", Value=4)]
       DOTA_CM_UnitsAutoAttack = 4,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_AutoPurchaseItems", Value=5)]
       DOTA_CM_AutoPurchaseItems = 5,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_TestItems", Value=6)]
       DOTA_CM_TestItems = 6,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_SearchString", Value=7)]
       DOTA_CM_SearchString = 7,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_Pause", Value=8)]
       DOTA_CM_Pause = 8,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_ShopViewMode", Value=9)]
       DOTA_CM_ShopViewMode = 9,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_SetUnitShareFlag", Value=10)]
       DOTA_CM_SetUnitShareFlag = 10,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_SwapRequest", Value=11)]
       DOTA_CM_SwapRequest = 11,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_SwapAccept", Value=12)]
       DOTA_CM_SwapAccept = 12,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_WorldLine", Value=13)]
       DOTA_CM_WorldLine = 13,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_RequestGraphUpdate", Value=14)]
       DOTA_CM_RequestGraphUpdate = 14,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_ItemAlert", Value=15)]
       DOTA_CM_ItemAlert = 15,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_ChatWheel", Value=16)]
       DOTA_CM_ChatWheel = 16,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_SendStatPopup", Value=17)]
       DOTA_CM_SendStatPopup = 17,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_BeginLastHitChallenge", Value=18)]
       DOTA_CM_BeginLastHitChallenge = 18,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_UpdateQuickBuy", Value=19)]
       DOTA_CM_UpdateQuickBuy = 19,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_UpdateCoachListen", Value=20)]
       DOTA_CM_UpdateCoachListen = 20,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_CoachHUDPing", Value=21)]
       DOTA_CM_CoachHUDPing = 21,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_RecordVote", Value=22)]
       DOTA_CM_RecordVote = 22,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_UnitsAutoAttackAfterSpell", Value=23)]
       DOTA_CM_UnitsAutoAttackAfterSpell = 23,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_WillPurchaseAlert", Value=24)]
       DOTA_CM_WillPurchaseAlert = 24,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_PlayerShowCase", Value=25)]
       DOTA_CM_PlayerShowCase = 25,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_TeleportRequiresHalt", Value=26)]
       DOTA_CM_TeleportRequiresHalt = 26,
             
-      [global::ProtoBuf.ProtoEnum(Name=@"DOTA_CM_CameraZoomAmount", Value=27)]
       DOTA_CM_CameraZoomAmount = 27
     }
   

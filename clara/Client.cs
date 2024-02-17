@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace nora.clara {
 
@@ -38,7 +39,7 @@ namespace nora.clara {
         }
 
         private SteamBot Bot { get; set; }
-        private uint ClientVersion = 1202;
+        private uint ClientVersion = 5988;
 
         private Dictionary<int, ulong> Active { get; set; }
         private Dictionary<string, ulong> Channels { get; set; }
@@ -126,12 +127,32 @@ namespace nora.clara {
             PendingTicketForAuth = AuthTicket.CreateAuthTicket(Bot.NextToken(), Bot.PublicIP);
         }
 
-        public void CreateLobby(string passKey) {
+        public void CreateLobby(string passKey)
+        {
+
+            var steam_id = 0u;
+            //invite somebody to lobby
+            if (steam_id != 0u)
+            {
+                var cmMsg = new ClientGCMsgProtobuf<CMsgInviteToParty>((uint)EGCBaseMsg.k_EMsgGCInviteToParty);
+                cmMsg.Body.steam_id = steam_id;
+                Bot.Coordinator.Send(cmMsg, 570);
+                Thread.Sleep(5000);
+            }
+            
+            
             var msg = new ClientGCMsgProtobuf<CMsgPracticeLobbyCreate>(
                 (uint) EDOTAGCMsg.k_EMsgGCPracticeLobbyCreate);
             msg.Body.client_version = ClientVersion;
             msg.Body.pass_key = passKey;
+            msg.Body.lobby_details = new CMsgPracticeLobbySetDetails();
+            msg.Body.lobby_details.server_region = 8;
+            msg.Body.lobby_details.allow_cheats = true;
+            msg.Body.lobby_details.pass_key = passKey;
+            msg.Body.lobby_details.game_name = "Test";
             Bot.Coordinator.Send(msg, Games.DotaGameId);
+            
+            Thread.Sleep(1000);
         }
 
         public void JoinLobbySlot(DOTA_GC_TEAM team) {

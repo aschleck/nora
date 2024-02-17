@@ -17,11 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lara", "lara\lara.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "protos", "protos\protos.csproj", "{5C53CAB7-1906-476B-877A-E75CBB540509}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assemblies", "assemblies", "{08BC3784-CBF3-4263-BF84-4AE372FF1E43}"
-	ProjectSection(SolutionItems) = preProject
-		assemblies\Snappy.Sharp.dll = assemblies\Snappy.Sharp.dll
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "machine", "machine\machine.csproj", "{6E766095-9B7E-4F93-A7F0-0C94A4571A76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ashly", "ashly\ashly.csproj", "{684CAA08-F4B0-4C86-A5F3-D500B655EDA3}"
